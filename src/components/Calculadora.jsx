@@ -41,7 +41,7 @@ function Calculadora() {
             setResultadoOrden("No hay números seleccionados.");
             return;
         }
-        fetch('http://localhost:3500/v1/calculadora/ascendente', {
+        fetch('https://calculadora-back-gray.vercel.app/v1/calculadora/ascendente', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ numbers })
@@ -59,7 +59,7 @@ function Calculadora() {
             setResultadoOrden("No hay números seleccionados");
             return;
         }
-        fetch('http://localhost:3500/v1/calculadora/descendente', {
+        fetch('https://calculadora-back-gray.vercel.app/v1/calculadora/descendente', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ numbers })
@@ -104,7 +104,7 @@ function Calculadora() {
         }
 
         // Enviar la ecuación al backend
-        fetch('http://localhost:3500/v1/calculadora/ecuacion', {
+        fetch('https://calculadora-back-gray.vercel.app/v1/calculadora/ecuacion', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
